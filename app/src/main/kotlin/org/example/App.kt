@@ -8,8 +8,15 @@ class App {
         get() {
             return "Hello World!"
         }
+    var pepe= "hola" 
+    var numero=23
+    val que= True  
 }
+
 
 fun main() {
     println(App().greeting)
+    println(pepe)
+    println(numero)
+    println(que) 
 }
