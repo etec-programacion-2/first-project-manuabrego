@@ -32,5 +32,6 @@ fun main() {
     val area: Double = base*alt
 
     println ("El area es: $area")
+    
 }
 
