@@ -1,10 +1,10 @@
 package org.example 
-
+/*
 fun main() {
     println("pepe hongo leproso")
 }
 
-/*
+
 val nombre= "Manuel Abrego"
 var dia="22 de abril, 2025 años después de Cristo"
 fun main() {
