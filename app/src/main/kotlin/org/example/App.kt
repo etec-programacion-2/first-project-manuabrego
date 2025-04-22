@@ -24,7 +24,7 @@ fun mostrarTiposDeDatos() {
     println("Altura: $altura")
     println("Es estudiante: $esEstudiante")
 }
-*/ 
+
 
 fun main() {
     val base: Double = 2.82
@@ -32,6 +32,12 @@ fun main() {
     val area: Double = base*alt
 
     println ("El area es: $area")
-    
-}
 
+}
+*/ 
+fun esParOImpar(numero: Int): String {
+    return when {
+        numero % 2 == 0 -> "Par"
+        else -> "Impar"
+    }
+}
