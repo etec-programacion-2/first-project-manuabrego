@@ -1,10 +1,10 @@
 package org.example 
-/*
+
 fun main() {
     println("pepe hongo leproso")
 }
 
-
+/*
 val nombre= "Manuel Abrego"
 var dia="22 de abril, 2025 años después de Cristo"
 fun main() {
@@ -34,10 +34,22 @@ fun main() {
     println ("El area es: $area")
 
 }
-*/ 
+
 fun esParOImpar(numero: Int): String {
     return when {
-        numero % 2 == 0 -> "Par"
+        numero % 2 == 0 -> "Par" 
         else -> "Impar"
+    }
+}
+*/
+fun esParOImpar(numero: Int): String {
+    return if (numero != 0) {
+        if (numero % 2 == 0) {
+            "Par"
+        } else {
+            "Impar"
+        }
+    } else {
+        "Es 0"
     }
 }
