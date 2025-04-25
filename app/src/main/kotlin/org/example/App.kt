@@ -110,9 +110,90 @@ fun factorial(n: Int): Int {
 fun saludar(nombre: String, edad: Int = 0) {
     println("Hola $nombre, tienes $edad años")
 }
-*/
+
 
 fun potencia(base: Double, exponente: Int): Double {
     return Math.pow(base, exponente.toDouble())
 
+}
+
+
+fun demostrarAlcanceVariables() {
+    // Variable local en el ámbito de la función
+    val variableGlobal = "Soy global en esta función"
+    
+    // Bloque if con su propio ámbito
+    if (true) {
+        val variableIf = "Soy local del if"
+        println("Dentro del if: $variableIf")
+        println("Puedo acceder a: $variableGlobal")
+    }
+    
+    // Bloque for con su propio ámbito
+    for (i in 1..3) {
+        val variableFor = "Soy local del for - iteración $i"
+        println("Dentro del for: $variableFor")
+        println("Puedo acceder a: $variableGlobal")
+    }
+    
+    // Intentar acceder a variables locales fuera de su ámbito
+    // println(variableIf)  // Esto daría error
+    // println(variableFor) // Esto daría error
+}
+
+fun calcularPromedio(numeros: List<Int>): Double {
+    var suma = 0  // Variable local mutable
+    var contador = 0  // Variable local mutable
+    
+    for (numero in numeros) {
+        suma += numero
+        contador++
+    }
+    
+    return if (contador > 0) suma.toDouble() / contador else 0.0
+}
+*/
+un numerosSos() {
+    // Creamos una lista para guardar los números
+    val numeros = mutableListOf<Int>()
+    
+    // Llenamos la lista con números del 1 al 10
+    for (i in 1..10) {
+        numeros.add(i)
+    }
+    
+    // Mostramos la lista creada
+    println("Lista de números: $numeros")
+    
+    // Si la lista está vacía, terminamos
+    if (numeros.isEmpty()) {
+        println("La lista está vacía")
+        return
+    }
+    
+    // Inicializamos las variables locales con el primer elemento
+    var menor = numeros[0]
+    var mayor = numeros[0]
+    
+    // Recorremos la lista para encontrar el menor y el mayor
+    for (numero in numeros) {
+        // Si encontramos un número menor, actualizamos la variable
+        if (numero < menor) {
+            menor = numero
+        }
+        
+        // Si encontramos un número mayor, actualizamos la variable
+        if (numero > mayor) {
+            mayor = numero
+        }
+    }
+    
+    // Mostramos los resultados
+    println("El número menor es: $menor")
+    println("El número mayor es: $mayor")
+}
+
+fun main() {
+    // Llamamos a la función
+    numerosSos()
 }
