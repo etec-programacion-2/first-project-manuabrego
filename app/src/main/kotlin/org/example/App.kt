@@ -77,7 +77,7 @@ fun mostrarNumerosConLoops() {
         k++
     } while (k <= 10)
 }
-*/
+
 
 fun mostrarNumerosConLoops() {
     
@@ -101,4 +101,18 @@ fun mostrarNumerosConLoops() {
         println(k)
         k++
     } while (k <= 20)
+}
+
+fun factorial(n: Int): Int {
+    return if (n <= 1) 1 else n * factorial(n - 1)
+}
+
+fun saludar(nombre: String, edad: Int = 0) {
+    println("Hola $nombre, tienes $edad años")
+}
+*/
+
+fun potencia(base: Double, exponente: Int): Double {
+    return Math.pow(base, exponente.toDouble())
+
 }
